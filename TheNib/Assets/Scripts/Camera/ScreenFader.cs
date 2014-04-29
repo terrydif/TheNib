@@ -11,6 +11,7 @@ public class ScreenFader : MonoBehaviour
 
 	private Color clearColor;
 	private Color whiteColor;
+	private Color blackColor;
 
 	private float fadeSpeed = 1;
 	
@@ -18,9 +19,10 @@ public class ScreenFader : MonoBehaviour
 	{
 		clearColor = new Color (1, 1, 1, 0);
 		whiteColor = new Color (1, 1, 1, 1);
+		blackColor = new Color (0, 0, 0, 1);
 
 		// Set Initial Colors
-		nextColor = clearColor;
+		nextColor = blackColor;
 		SetColor(whiteColor);
 	}
 	

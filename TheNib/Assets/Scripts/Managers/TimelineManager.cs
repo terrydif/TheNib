@@ -4,19 +4,42 @@ using System.Collections;
 public class TimelineManager : MonoBehaviour {
 	
 	private float time;
-	private int currentRoom;
+	private bool moving;
+	public static int currentRoom;
 
-	public RoomOne roomOne;
+	public ScreenFader screenFader;
+
+	// Room One
+	public Transform dais;
+	public Vector3 newDaisPosition;
+
+	// Room Two
 
 	void Start() 
 	{
-		currentRoom = 1;
+		if (currentRoom == null)
+		{
+			currentRoom = 1;
+			newDaisPosition = dais.position;
+		}
+
+		moving = false;
 		time = 0.0f;
 	}
 
 	void Update() 
 	{
 		time += Time.deltaTime;
+
+		if (moving)
+		{
+			dais.position = Vector3.Lerp(dais.position, newDaisPosition, Time.deltaTime * 0.3f);
+		}
+	}
+
+	public void firstLight()
+	{
+		screenFader.FadeIn();
 	}
 
 	public void transitionRooms()
@@ -25,13 +48,15 @@ public class TimelineManager : MonoBehaviour {
 		{
 		case 1:
 			Debug.Log("Switch to Room 2!");
-			roomOne.exitRoom();
+			moving = true;
+			newDaisPosition.y -= 240;
 			currentRoom = 2;
 			break;
 
 		case 2:
 			Debug.Log("Switch to Room 3!");
 			currentRoom = 3;
+			Application.LoadLevel("JonesRoom");
 			break;
 
 		case 3:
