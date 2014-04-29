@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 37f6c38822c20f444bc61fc5b0f65b95
+guid: 17d083901aadfe84cb4b343b1f298424
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Tube001
     400000: //RootNode
-    400002: Tube001
-    2300000: Tube001
-    3300000: Tube001
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Tube001
     9500000: //RootNode
   materials:
@@ -47,7 +45,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
