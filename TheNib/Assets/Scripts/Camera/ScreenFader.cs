@@ -14,16 +14,16 @@ public class ScreenFader : MonoBehaviour
 	private Color blackColor;
 
 	private float fadeSpeed = 1;
-	
-	void Start ()
+
+	void Awake ()
 	{
 		clearColor = new Color (1, 1, 1, 0);
 		whiteColor = new Color (1, 1, 1, 1);
 		blackColor = new Color (0, 0, 0, 1);
-
+		
 		// Set Initial Colors
 		nextColor = blackColor;
-		SetColor(whiteColor);
+		SetFade(whiteColor, 1.0f);
 	}
 	
 	void Update ()
@@ -32,17 +32,24 @@ public class ScreenFader : MonoBehaviour
 		{
 			timer = Mathf.Clamp (timer + Time.deltaTime * fadeSpeed, 0, 1);
 			renderer.material.color = Color.Lerp (previousColor, nextColor, timer);
+
+			if(renderer.material.color == nextColor)
+			{
+				fadingIn = false;
+				timer = 0;
+			}
 		}
 	}
 	
-	public void FadeIn ()
+	public void FadeIn()
 	{
 		fadingIn = true;
 	}
 
-	public void SetColor(Color color)
+	public void SetFade(Color color, float speed)
 	{
 		previousColor = nextColor;
 		nextColor = color;
+		fadeSpeed = speed;
 	}
 }

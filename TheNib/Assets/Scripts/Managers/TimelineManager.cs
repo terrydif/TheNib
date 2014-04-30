@@ -37,9 +37,20 @@ public class TimelineManager : MonoBehaviour {
 		}
 	}
 
-	public void firstLight()
+	public void callFade()
 	{
 		screenFader.FadeIn();
+	}
+
+	public void firstLight()
+	{
+		callFade();
+	}
+
+	public void slowFadeFromWhite()
+	{
+		screenFader.SetFade(new Color(0,0,0,0), 0.1f);
+		Invoke("callFade", 1.0f);
 	}
 
 	public void transitionRooms()
