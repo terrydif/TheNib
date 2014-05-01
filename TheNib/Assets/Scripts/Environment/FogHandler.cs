@@ -12,7 +12,7 @@ public class FogHandler : MonoBehaviour {
 
 	void Awake () 
 	{
-		_density = 0.01f;
+		_density = 0.1f;
 		_color = new Color(0.7f,0.0f,1.0f,0.6f);
 	}
 

@@ -54,6 +54,12 @@ public class TimelineManager : MonoBehaviour {
 		Invoke("callFade", 1.0f);
 	}
 
+	public void fadeToBlack()
+	{
+		screenFader.SetFade(new Color(0,0,0,1), 0.1f);
+		Invoke("callFade", 1.0f);
+	}
+
 	public void tubeFogTransition()
 	{
 		fogHandler.setFog(0.004f, new Color(0,0,0,1));
