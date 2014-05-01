@@ -7,6 +7,8 @@ public class Artifact : MonoBehaviour
 
 	public VortexEffect vortexLeft;
 	public VortexEffect vortexRight;
+	public MotionBlur blurLeft;
+	public MotionBlur blurRight;
 
 	private Perlin perlin;
 
@@ -31,5 +33,8 @@ public class Artifact : MonoBehaviour
 		
 		vortexLeft.angle = perlin.Noise(Time.time) * effectPower / 2f;
 		vortexRight.angle = perlin.Noise(Time.time) * effectPower / 2f;
+
+		blurLeft.blurAmount = Mathf.Lerp(blurLeft.blurAmount, Map.map(effectPower, 0, 35, 0, 0.8f), Time.deltaTime * 5);
+		blurRight.blurAmount = Mathf.Lerp(blurRight.blurAmount, Map.map(effectPower, 0, 35, 0, 0.8f), Time.deltaTime * 5);
 	}
 }
