@@ -5,6 +5,8 @@ public class Artifact : MonoBehaviour
 {
 	public GameObject lookCamera;
 
+	public GlitchEffect glitchLeft;
+	public GlitchEffect glitchRight;
 	public VortexEffect vortexLeft;
 	public VortexEffect vortexRight;
 	public MotionBlur blurLeft;
@@ -30,6 +32,17 @@ public class Artifact : MonoBehaviour
 		vortexRight.center = new Vector2(0.5f + perlin.Noise(Time.time * (effectPower/200))/4,
 		                                 0.5f + perlin.Noise(Time.time * (effectPower/200) + 124.24f)/2);
 
+		if(effectPower > 17.5f)
+		{
+			//glitchLeft.enabled = true;
+			//glitchRight.enabled = true;
+
+			if(glitchLeft.intensity == 0)
+			{
+				//glitchLeft.intensity = 0.15f;
+				//glitchRight.intensity = 0.15f;
+			}
+		}
 		
 		vortexLeft.angle = perlin.Noise(Time.time) * effectPower / 2f;
 		vortexRight.angle = perlin.Noise(Time.time) * effectPower / 2f;

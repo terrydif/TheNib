@@ -7,13 +7,18 @@ public class WallsCloseIn : MonoBehaviour
 	public Texture2D[] crackTexs;
 	public Texture2D[] crackNormalTexs;
 	public GameObject crackPlane;
-
+	public GlitchEffect glitchLeft;
+	public GlitchEffect glitchRight;
+	
 	private int currentCrack = 0;
-	private float timeUntilCrack = 47;
+	private float timeUntilCrack = 47f;
 	private float crackSpeed = 1f;
 
 	public void IncrementCrack()
 	{
+		glitchLeft.intensity += 0.333f;
+		glitchRight.intensity += 0.333f;
+
 		if(currentCrack < crackTexs.Length - 1)
 		{
 			currentCrack++;
@@ -33,7 +38,15 @@ public class WallsCloseIn : MonoBehaviour
 			timeUntilCrack -= Time.deltaTime;
 			if(timeUntilCrack <= 0 && currentCrack == 0)
 			{
+				glitchLeft.intensity = 0;
+				glitchRight.intensity = 0;
 				IncrementCrack();
+			}
+
+			if(currentCrack > 0)
+			{
+				glitchLeft.enabled = true;
+				glitchRight.enabled = true;
 			}
 		}
 	}

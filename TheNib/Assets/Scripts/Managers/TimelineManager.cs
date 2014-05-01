@@ -33,7 +33,7 @@ public class TimelineManager : MonoBehaviour {
 
 		if (moving)
 		{
-			dais.position = Vector3.Lerp(dais.position, newDaisPosition, Time.deltaTime * 0.3f);
+			dais.position = Vector3.MoveTowards(dais.position, newDaisPosition, Time.deltaTime * 1);
 		}
 	}
 
