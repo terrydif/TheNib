@@ -12,6 +12,7 @@ public class TimelineManager : MonoBehaviour {
 	// Room One
 	public Transform dais;
 	public Vector3 newDaisPosition;
+	public FogHandler fogHandler;
 
 	// Room Two
 
@@ -51,6 +52,11 @@ public class TimelineManager : MonoBehaviour {
 	{
 		screenFader.SetFade(new Color(0,0,0,0), 0.1f);
 		Invoke("callFade", 1.0f);
+	}
+
+	public void tubeFogTransition()
+	{
+		fogHandler.setFog(0.004f, new Color(0,0,0,1));
 	}
 
 	public void transitionRooms()
