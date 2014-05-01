@@ -17,7 +17,7 @@ public class TimelineManager : MonoBehaviour {
 
 	void Start() 
 	{
-		if (currentRoom == null)
+		if (currentRoom != 2 && currentRoom != 3)
 		{
 			currentRoom = 1;
 			newDaisPosition = dais.position;
