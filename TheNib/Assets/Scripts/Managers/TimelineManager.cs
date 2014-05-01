@@ -34,7 +34,7 @@ public class TimelineManager : MonoBehaviour {
 
 		if (moving)
 		{
-			dais.position = Vector3.MoveTowards(dais.position, newDaisPosition, Time.deltaTime * 1);
+			dais.position = Vector3.MoveTowards(dais.position, newDaisPosition, Time.deltaTime * 0.25f);
 		}
 	}
 
@@ -66,7 +66,7 @@ public class TimelineManager : MonoBehaviour {
 		case 1:
 			Debug.Log("Switch to Room 2!");
 			moving = true;
-			newDaisPosition.y -= 240;
+			newDaisPosition.y -= 11;
 			currentRoom = 2;
 			break;
 
