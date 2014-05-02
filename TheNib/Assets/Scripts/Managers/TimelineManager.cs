@@ -13,6 +13,7 @@ public class TimelineManager : MonoBehaviour {
 	public Transform dais;
 	public Vector3 newDaisPosition;
 	public FogHandler fogHandler;
+	public ParticleHandler particleHandler;
 
 	private float nextGlitch = 5;
 	public GlitchEffect glitchLeft;
@@ -84,6 +85,16 @@ public class TimelineManager : MonoBehaviour {
 	public void tubeFogTransition()
 	{
 		fogHandler.setFog(0.004f, new Color(0,0,0,1));
+	}
+
+	public void beginParticleIncrease()
+	{
+		particleHandler.beginExponentialParticles();
+	}
+
+	public void disableParticles()
+	{
+		particleHandler.gameObject.SetActive(false);
 	}
 
 	public void transitionRooms()
