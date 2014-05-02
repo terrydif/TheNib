@@ -15,22 +15,24 @@ Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\TerryTest
 Loading C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\TerryTestBuilds\TerryTest5_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\TerryTestBuilds\TerryTest5_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
 Loading C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\TerryTestBuilds\TerryTest5_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-- Completed reload, in  0.056 seconds
+- Completed reload, in  0.054 seconds
 desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\TerryTestBuilds\TerryTest5_Data\Managed\Boo.Lang.dll (this message is harmless)
-Switch to Room 2!
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
  
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+(Filename:  Line: 698)
 
-Switch to Room 3!
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
  
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+(Filename:  Line: 698)
 
-UnloadTime: 3.006513 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
+ 
+(Filename:  Line: 698)
 
-Unloading 212 unused Assets to reduce memory usage. Loaded Objects now: 335.
-Total: 3.097853 ms (FindLiveObjects: 0.029249 ms CreateObjectMapping: 0.013341 ms MarkObjects: 0.102628 ms  DeleteObjects: 2.415884 ms)
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
+ 
+(Filename:  Line: 698)
 

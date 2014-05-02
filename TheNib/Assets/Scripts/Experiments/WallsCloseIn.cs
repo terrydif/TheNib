@@ -29,6 +29,11 @@ public class WallsCloseIn : MonoBehaviour
 		}
 	}
 
+	void GoToBlack()
+	{
+		Application.LoadLevel("Black");
+	}
+
 	void Update()
 	{
 		transform.position += moveSpeed * Time.deltaTime;
@@ -41,6 +46,8 @@ public class WallsCloseIn : MonoBehaviour
 				glitchLeft.intensity = 0;
 				glitchRight.intensity = 0;
 				IncrementCrack();
+
+				Invoke("GoToBlack", 5);
 			}
 
 			if(currentCrack > 0)

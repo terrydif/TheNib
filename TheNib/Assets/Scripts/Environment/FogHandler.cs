@@ -12,15 +12,15 @@ public class FogHandler : MonoBehaviour {
 
 	void Awake () 
 	{
-		_density = 0.1f;
+		_density = 0.2f;
 		_color = new Color(0.7f,0.0f,1.0f,0.6f);
 	}
 
 	void Update () 
 	{
 		RenderSettings.fogDensity = Mathf.MoveTowards(RenderSettings.fogDensity, _density, Time.deltaTime * speed);
-		RenderSettings.fogColor = Color.Lerp(RenderSettings.fogColor, _color, Time.deltaTime * colorSpeed);
-		riftCamera.BackgroundColor = Color.Lerp(riftCamera.BackgroundColor, _color, Time.deltaTime * colorSpeed);
+		RenderSettings.fogColor = ColorMoveTowards(RenderSettings.fogColor, _color, Time.deltaTime * colorSpeed);
+		riftCamera.BackgroundColor = ColorMoveTowards(riftCamera.BackgroundColor, _color, Time.deltaTime * colorSpeed);
 	}
 
 	public void setFog (float density, Color color)
@@ -28,5 +28,9 @@ public class FogHandler : MonoBehaviour {
 		_density = density;
 		_color = color;
 	}
-	
+
+	public Color ColorMoveTowards(Color currentColor, Color targetColor, float maxDelta)
+	{
+		return (Color)Vector4.MoveTowards(currentColor, targetColor, maxDelta);
+	}
 }

@@ -14,7 +14,19 @@ public class TimelineManager : MonoBehaviour {
 	public Vector3 newDaisPosition;
 	public FogHandler fogHandler;
 
+	private float nextGlitch = 5;
+	public GlitchEffect glitchLeft;
+	public GlitchEffect glitchRight;
+
 	// Room Two
+
+	public void DeactivateGlitch()
+	{
+		nextGlitch = Random.Range(3, 8);
+
+		glitchLeft.enabled = false;
+		glitchRight.enabled = false;
+	}
 
 	void Start() 
 	{
@@ -36,6 +48,15 @@ public class TimelineManager : MonoBehaviour {
 		{
 			dais.position = Vector3.MoveTowards(dais.position, newDaisPosition, Time.deltaTime * 0.25f);
 		}
+
+		nextGlitch -= Time.deltaTime;
+		if(nextGlitch < 0)
+		{
+			nextGlitch = 100;
+			glitchLeft.enabled = true;
+			glitchRight.enabled = true;
+			Invoke("DeactivateGlitch", 0.25f);
+		}
 	}
 
 	public void callFade()
@@ -56,8 +77,8 @@ public class TimelineManager : MonoBehaviour {
 
 	public void fadeToBlack()
 	{
-		screenFader.SetFade(new Color(0,0,0,1), 0.1f);
-		Invoke("callFade", 1.0f);
+		screenFader.SetFade(new Color(0,0,0,1), 0.5f);
+		Invoke("callFade", 0f);
 	}
 
 	public void tubeFogTransition()
