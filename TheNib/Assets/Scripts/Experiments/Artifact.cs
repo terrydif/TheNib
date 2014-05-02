@@ -12,6 +12,9 @@ public class Artifact : MonoBehaviour
 	public MotionBlur blurLeft;
 	public MotionBlur blurRight;
 
+	public AudioSource artifactNoise;
+	public AudioSource lookAwayNoise;
+
 	private Perlin perlin;
 
 	void Start()
@@ -49,5 +52,10 @@ public class Artifact : MonoBehaviour
 
 		blurLeft.blurAmount = Mathf.Lerp(blurLeft.blurAmount, Map.map(effectPower, 0, 35, 0, 0.8f), Time.deltaTime * 5);
 		blurRight.blurAmount = Mathf.Lerp(blurRight.blurAmount, Map.map(effectPower, 0, 35, 0, 0.8f), Time.deltaTime * 5);
+
+		artifactNoise.volume = Mathf.Clamp(Map.map(angleTo, 30, 0, 0, 0.6f), 0, 0.6f);
+		artifactNoise.pitch = Mathf.Lerp(artifactNoise.pitch, Mathf.Clamp(Map.map(angleTo, 30, 0, 0.4f, 0.7f), 0.4f, 0.7f), Time.deltaTime * 0.4f) + perlin.Noise(Time.time)/50f;
+	
+		//lookAwayNoise.volume = Mathf.Lerp(lookAwayNoise.volume, Mathf.Clamp(Map.map(angleTo, 50, 90, 0, 1), 0, 1), Time.deltaTime * 4f);
 	}
 }

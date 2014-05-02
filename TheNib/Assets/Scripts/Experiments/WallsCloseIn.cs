@@ -9,6 +9,7 @@ public class WallsCloseIn : MonoBehaviour
 	public GameObject crackPlane;
 	public GlitchEffect glitchLeft;
 	public GlitchEffect glitchRight;
+	public AudioSource glitchSound;
 	
 	private int currentCrack = 0;
 	private float timeUntilCrack = 47f;
@@ -48,6 +49,7 @@ public class WallsCloseIn : MonoBehaviour
 				IncrementCrack();
 
 				Invoke("GoToBlack", 5);
+				glitchSound.Play();
 			}
 
 			if(currentCrack > 0)

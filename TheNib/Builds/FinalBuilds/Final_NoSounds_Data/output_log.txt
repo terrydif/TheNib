@@ -15,28 +15,7 @@ Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\FinalBuil
 Loading C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\FinalBuilds\Final_NoSounds_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\FinalBuilds\Final_NoSounds_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
 Loading C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\FinalBuilds\Final_NoSounds_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-- Completed reload, in  0.053 seconds
+- Completed reload, in  0.055 seconds
 desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Momo\Documents\GitHub\TheNib\TheNib\Builds\FinalBuilds\Final_NoSounds_Data\Managed\Boo.Lang.dll (this message is harmless)
-Switch to Room 2!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Switch to Room 3!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-UnloadTime: 2.581629 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 247 unused Assets to reduce memory usage. Loaded Objects now: 345.
-Total: 3.949672 ms (FindLiveObjects: 0.027196 ms CreateObjectMapping: 0.013341 ms MarkObjects: 0.102628 ms  DeleteObjects: 3.280532 ms)
-
-UnloadTime: 1.425515 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 58 unused Assets to reduce memory usage. Loaded Objects now: 173.
-Total: 0.994473 ms (FindLiveObjects: 0.011802 ms CreateObjectMapping: 0.010262 ms MarkObjects: 0.060551 ms  DeleteObjects: 0.445409 ms)
-
